@@ -1,0 +1,56 @@
+<form name="obezbeduvanjePodatoci">
+  <h2>Статус на проблем:Обезбедување податоци од техничар</h2>
+    <div class="form-group">
+      <label for="fname">Име и презиме на клиент кој пријавил</label>
+      <input class="form-control" 
+          cam-variable-name="fname"
+          cam-variable-type="String"
+          name="fname" disabled/>
+      <br/>
+
+      <label for="eml">Емаил адреса</label>
+      <input class="form-control" 
+          cam-variable-name="eml"
+          cam-variable-type="String"
+          name="eml" disabled/>
+      <br/>
+
+      <label for="kompanija">Компанија</label>
+      <input class="form-control" 
+          cam-variable-name="kompanija"
+          cam-variable-type="String"
+          name="kompanija" disabled/> 
+      <br/>
+
+      <label for="prioritet">Приоритет на проблем(1,2,3)</label>
+      <input class="form-control" placeholder="1(критичен),2 и 3(голем минорен)"
+          cam-variable-name="prioritet"
+          cam-variable-type="String"
+          name="prioritet" disabled/>
+      <br/>
+
+      <label for="naslov">Наслов на проблем:</label>
+      <input class="form-control" 
+          cam-variable-name="naslov"
+          cam-variable-type="String"
+          name="naslov" disabled/> 
+      <br/>
+
+      <label for="opis">Опис на проблем:</label>
+      <textarea class="form-control" 
+          cam-variable-name="opis" 
+          cam-variable-type="String"
+          name="opis"
+          style="height:200px" disabled></textarea>
+      <br/>
+      <label for="bl">Пријава за проблем:</label><br>
+      <a name="bl" cam-file-download="baranje"></a>
+    </div>
+    <div class="form-group">
+      <label for="bs">Прикачи податоци од техничар:</label><br/>
+      <input type="file"
+         cam-variable-name="tehpodatoci"
+         cam-variable-type="File"
+         cam-max-filesize="10000000" />
+    </div>
+  </form>

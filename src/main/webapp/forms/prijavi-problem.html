@@ -1,0 +1,55 @@
+<form name="prijaviProblem">
+    <h2>Пријава на проблем</h2>
+    <div class="form-group">
+        <label for="fname">Име и презиме на клиент кој пријавил</label>
+        <input class="form-control" 
+            cam-variable-name="fname"
+            cam-variable-type="String"
+            name="fname"/>
+        <br/>
+
+        <label for="eml">Емаил адреса</label>
+        <input class="form-control" 
+            cam-variable-name="eml"
+            cam-variable-type="String"
+            name="eml"/>
+        <br/>
+
+        <label for="kompanija">Компанија</label>
+        <input class="form-control" 
+            cam-variable-name="kompanija"
+            cam-variable-type="String"
+            name="kompanija"/> 
+        <br/>
+
+        <label for="prioritet">Приоритет на проблем(1,2,3)</label>
+        <input class="form-control" placeholder="1(критичен),2 и 3(голем минорен)"
+            cam-variable-name="prioritet"
+            cam-variable-type="String"
+            name="prioritet"/>
+        <br/>
+
+        <label for="naslov">Наслов на проблем:</label>
+        <input class="form-control" 
+            cam-variable-name="naslov"
+            cam-variable-type="String"
+            name="naslov"/> 
+        <br/>
+
+        <label for="opis">Опис на проблем:</label>
+        <textarea class="form-control" 
+            cam-variable-name="opis" 
+            cam-variable-type="String"
+            name="opis"
+            style="height:200px"></textarea>
+        <br/>
+
+        <label>Прикачи пријава за проблем:</label>
+        <br/>
+        <input type="file"
+        cam-variable-name="baranje"
+        cam-variable-type="File"
+        cam-max-filesize="10000000" />
+        <br/>
+    </div>
+</form>

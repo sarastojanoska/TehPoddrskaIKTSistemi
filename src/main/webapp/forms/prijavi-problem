@@ -1,0 +1,9 @@
+<form name="prijaviProblem">
+    <div class="form-group">
+    <label>Прикачи пријава за проблем</label>
+        <input type="file"
+        cam-variable-name="baranje"
+        cam-variable-type="File"
+        cam-max-filesize="10000000" />
+        </div>
+</form>

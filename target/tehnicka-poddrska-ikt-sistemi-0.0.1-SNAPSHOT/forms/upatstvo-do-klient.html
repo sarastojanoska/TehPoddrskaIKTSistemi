@@ -1,0 +1,35 @@
+<form role="form" name="upatstvoKlient">
+  <h2>Статус на проблем: Испраќање детално упатство на клиент за решавање на проблемот</h2>
+    <script cam-script type="text/form-script">
+    inject(['$scope', 'camAPI', function($scope, camAPI) {
+    
+        var groupName = 'klienti';
+        var User = camAPI.resource('user');
+    
+        User.list({memberOfGroup: groupName}, function(err, data) {
+            if (!err) {
+                $scope.users = data;
+            }
+        });
+    }]);
+    </script>
+    <div class="form-group">
+        <label>Прикачи упатство за клиент:</label><br/>
+        <input type="file"
+           cam-variable-name="upatstvo"
+           cam-variable-type="File"
+           cam-max-filesize="10000000" />
+      </div>
+          <div class="control-group">
+        <label class="control-label">Клиент:</label>
+        <div class="controls">
+          <select required
+        cam-variable-name="klient"
+        cam-variable-type="String"
+        ng-model="selectedUser"
+        ng-options="user.id as (user.firstName + ' ' + user.lastName) for user in users track by user.id">
+    </select>
+          <p>Кој клиент пријавил проблем?</p>
+        </div>
+      </div>
+    </form>

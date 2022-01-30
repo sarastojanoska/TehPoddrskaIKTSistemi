@@ -1,0 +1,28 @@
+<form role="form" name="odrediInzener">
+  <h2>Статус на проблем: Одредување на инженер одговорен за дополнително решавање на проблемот</h2>
+    <script cam-script type="text/form-script">
+    inject(['$scope', 'camAPI', function($scope, camAPI) {
+    
+        var groupName = 'inzeneri';
+        var User = camAPI.resource('user');
+    
+        User.list({memberOfGroup: groupName}, function(err, data) {
+            if (!err) {
+                $scope.users = data;
+            }
+        });
+    }]);
+    </script>
+          <div class="control-group">
+        <label class="control-label">Избери инженер:</label>
+        <div class="controls">
+          <select required
+            cam-variable-name="inzener"
+            cam-variable-type="String"
+            ng-model="selectedUser"
+            ng-options="user.id as (user.firstName + ' ' + user.lastName) for user in users track by user.id">
+    </select>
+          <p>Кој инженер да го решава проблемот?</p>
+        </div>
+      </div>
+    </form>
